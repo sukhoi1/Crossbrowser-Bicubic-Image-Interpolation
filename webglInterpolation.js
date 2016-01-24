@@ -11,6 +11,12 @@ $.fn.bicubicImgInterpolation = function(settings) {
 			var src = $(this).attr('src');
 			var imgW = this.width;
 			var imgH = this.height;
+			
+			debugger;
+			var natW = $(this).naturalWidth;
+			var natH = $(this).naturalHeight;
+			
+			
 			$(this).after("<canvas style='display: none' width='" + imgW +  "' height='" + imgH + "'></canvas>");
 			var can = $(this).next()[0];
 			var callback = drawHighResolutionImgThumbnail;
